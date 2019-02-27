@@ -46,32 +46,32 @@ public:
      * @param name - name of person to add
      * @return true - person added successfully, false - person not added
      */
-    bool addPerson(const QString& name);
+    bool addUser(const QString& username);
 
     /**
      * @brief Remove person data from db
      * @param name - name of person to remove.
      * @return true - person removed successfully, false - person not removed
      */
-    bool removePerson(const QString& name);
+    bool removeUsername(const QString& username);
 
     /**
      * @brief Check if person of name "name" exists in db
      * @param name - name of person to check.
      * @return true - person exists, false - person does not exist
      */
-    bool personExists(const QString& name) const;
+    bool userExists(const QString& name) const;
 
     /**
      * @brief Print names of all persons in db
      */
-    void printAllPersons() const;
+    void printAllUsernames() const;
 
     /**
      * @brief Remove all persons from db
      * @return true - all persons removed successfully, false - not removed
      */
-    bool removeAllPersons();
+    bool removeAllUsers();
 
 private:
     QSqlDatabase m_db;
